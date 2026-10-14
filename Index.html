@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LORD BUDDHA EDUCATION POINT</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f6fc;
+      color: #172554;
+    }
+    header {
+      background: #123778;
+      color: white;
+      text-align: center;
+      padding: 28px 15px;
+    }
+    header h1 { margin: 0 0 10px; font-size: 25px; }
+    nav {
+      background: #0b2451;
+      text-align: center;
+      padding: 13px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    main {
+      max-width: 650px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 5px 22px #00000010;
+    }
+    label { display: block; margin: 15px 0 7px; }
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 7px;
+      border: 1px solid #cbd5e1;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 20px;
+      border: 0;
+      background: #123778;
+      color: white;
+      font-weight: bold;
+    }
+    #message { margin-top: 16px; }
+    footer {
+      text-align: center;
+      padding: 22px;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LORD BUDDHA EDUCATION POINT</h1>
+    <p>Srisiya, Kanti, Muzaffarpur, Bihar</p>
+    <p>ज्ञान • अनुशासन • सफलता</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#result">Student Result</a>
+  </nav>
+  <main id="home">
+    <section class="card" id="result">
+      <h2>Student Result Portal</h2>
+      <p>अपना परीक्षा परिणाम देखने के लिए जानकारी भरें।</p>
+      <form id="resultForm">
+        <label for="className">Class / कक्षा</label>
+        <select id="className" required>
+          <option value="">कक्षा चुनें</option>
+          <option>Nursery</option>
+          <option>LKG</option>
+          <option>UKG</option>
+          <option>Class 1</option>
+          <option>Class 2</option>
+          <option>Class 3</option>
+          <option>Class 4</option>
+          <option>Class 5</option>
+          <option>Class 6</option>
+          <option>Class 7</option>
+          <option>Class 8</option>
+          <option>Class 9</option>
+          <option>Class 10</option>
+        </select>
+        <label for="studentName">Student Name / विद्यार्थी का नाम</label>
+        <input id="studentName" required placeholder="पूरा नाम लिखें">
+        <label for="rollNumber">Roll Number / रोल नंबर</label>
+        <input id="rollNumber" required placeholder="रोल नंबर लिखें">
+        <label for="exam">Examination / परीक्षा</label>
+        <select id="exam" required>
+          <option value="">परीक्षा चुनें</option>
+          <option>Monthly Test</option>
+          <option>Half Yearly Examination</option>
+          <option>Annual Examination</option>
+        </select>
+        <button type="submit">Check Result</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+  </main>
+  <footer>© LORD BUDDHA EDUCATION POINT</footer>
+  <script>
+    document.getElementById('resultForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      document.getElementById('message').textContent =
+        'Result database se connection abhi setup nahi hua hai. कृपया बाद में प्रयास करें।';
+    });
+  </script>
+</body>
+</html>
